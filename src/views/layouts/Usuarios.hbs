@@ -1,0 +1,252 @@
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="form-group img ">
+        <img src="../img/logo.png" class="imgestilo" for="exampleInputEmail1"></img>
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="Principal" class="list-group-item list-group-item-action bg-light">Inicio</a>
+        <a href="Usuarios" class="list-group-item list-group-item-action bg-light">Usuarios</a>
+        <a href="productos" class="list-group-item list-group-item-action bg-light">Productos</a>
+        <a href="solicitudes" class="list-group-item list-group-item-action bg-light">Solicitudes</a>
+        <a href="informes" class="list-group-item list-group-item-action bg-light">Informe</a>
+      </div>
+
+      <div class="text-center py-5 mt-3 close-position">
+        <a href="login" ><button type="button" class="btn btn-danger " ng-click="" >
+           <span  class="icon-video"> Cerrar Sesión </span>
+        </button></a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom sombra">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid content">
+        <h1 class="mt-2" id="titulo">Usuarios</h1>
+        <p class="subtitle">Señor Administrador realice la creacion de nuevos usuarios y la gestion de todos los existentes.  </p>
+      </div>
+
+       <!--FIN Titulo y descripción de la pantalla -->
+       <div class="container-fluid content">
+        <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#agregarusuario">Crear nuevo Usuario</button>
+      </div>
+      <!-- Modal -->
+      <form action="createuser" method="POST">
+        <div class="modal fade" id="agregarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-contenido">
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Cedula Responsable:</label>
+                  <div class="col-sm-7">
+                    <input name="numcc" type="text" class="form-control" id="inputCodigo" placeholder="Ingrese numero de cedula">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Nombre Responsable:</label>
+                  <div class="col-sm-7">
+                    <input name="nombre" type="text" class="form-control" id="inputNombre" placeholder="Ingrese nombres y apellidos">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Rol:</label>
+                  <div class="col-sm-7">
+                    <select class="form-control" name="rol">
+                      <option value="1">Administrador</option>
+                      <option value="5">Operador Logístico</option>
+                      <option value="8">Área Ventas</option>
+                      <option value="10">Área Administrativa</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Cargo:</label>
+                  <div class="col-sm-7">
+                    <input name="cargo" type="text" class="form-control" id="inputCargo" placeholder="Cargo asignado en el area">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Correo:</label>
+                  <div class="col-sm-7">
+                    <input name="correo" type="text" class="form-control" id="inputCorreo" placeholder="Cargo asignado en el area">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Contraseña:</label>
+                  <div class="col-sm-7">
+                    <input name="password" type="password" class="form-control" id="inputcontrasena" placeholder="Ingrese una contraseña">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button id= "botonInicio" type="submit" class="btn btn-primary">Crear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <!--FIN MODAL --> 
+
+      <div class="navcontent">
+        <div class="input-group mb-3 content">
+
+          <input type="text" class="form-control" placeholder="Ingrese criterio de busqueda" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Buscar</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Inicio Tabla de productos -->
+      <div class="tables content">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre </th>
+              <th scope="col">N° documento</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Cargo</th>
+              <th scope="col">Rol</th>
+              <th scope="col">Acción</th>
+            </tr>
+            
+          </thead>
+          <tbody>
+              {{#each usuarios}}
+              <tr>
+                <th scope="row">{{idUsuario}}</th>
+                <td id= "usuNombre{{idUsuario}}">{{UsuNombre}}</td>
+                <td id= "usuIden{{idUsuario}}">{{UsuIdentificacion}}</td>
+                <td id= "usuCorreo{{idUsuario}}">{{UsuCorreo_Electronico}}</td>
+                <td id= "usuCargo{{idUsuario}}">{{UsuCargo}}</td>
+                <td id= "usuRol{{idUsuario}}" placeholder="{{UsuId_Rol}}">{{RolNombre_Rol}}</td>
+                <td>
+                  <button value="{{idUsuario}}" type="button" class="btn btn-outline-secondary" data-toggle="modal" onclick="editUser({{idUsuario}})">Editar</button>
+                </td>
+              </tr>
+              {{/each}}
+          </tbody>
+        </table>
+      </div>
+      <!--Fin Tabla de productos -->
+
+      <!-- Modal editar usuario-->
+      <form action="edituser" method="POST">
+        <div class="modal fade" id="editarusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body modal-contenido">
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Id Usuario:</label>
+                  <div class="col-sm-7">
+                    <input name="idUser" type="text" class="form-control" id="idUser">
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Número documento:</label>
+                  <div class="col-sm-7">
+                    <input name="ccUser" type="text" class="form-control" id="ccUser" >
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Nombre:</label>
+                  <div class="col-sm-7">
+                    <input name="nombreUser" type="text" class="form-control" id="nombreUser">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Rol:</label>
+                  <div class="col-sm-7">
+                      <select name="listRol" class="form-control" name="rol" id="listRol">
+                      <option value="1">Administrador</option>
+                      <option value="5">Operador Logístico</option>
+                      <option value="8">Área Ventas</option>
+                      <option value="10">Área Administrativa</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label  class="col-sm-5 col-form-label">Cargo:</label>
+                  <div class="col-sm-7">
+                    <input name="cargoUser" type="text" class="form-control" id="cargoUser">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-5 col-form-label">Correo:</label>
+                  <div class="col-sm-7">
+                    <input name="correoUser" type="text" class="form-control" id="correoUser">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button id= "botonInicio" type="submit" class="btn btn-primary">Editar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+      {{!-- Fin modal editar usuario --}}
+
+    </div>
+    <!-- /#page-content-wrapper -->
+    </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
