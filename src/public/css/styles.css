@@ -378,7 +378,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 h5, .h5 {
@@ -3912,6 +3912,11 @@ input[type=button].btn-block {
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
 }
+
+.nav-name:hover, .nav-link:focus {
+  text-decoration: none;
+}
+
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;

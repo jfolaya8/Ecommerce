@@ -39,6 +39,7 @@ html {
     width: 100%;
     min-height: 100%;
     padding: 20px;
+    margin-top: 30px;
   }
   
   #formContent {
@@ -281,3 +282,28 @@ html {
       width: 60%;
       margin: auto;
   }
+
+  /* alertas */
+
+.alerta_visible{
+  display: block !important;
+  width: 85%;
+  margin: auto auto;
+}
+
+.alerta_novisble{
+  display: none;
+}
+
+.visible{
+  display: block;
+}
+
+.noVisible{
+  display: none !important;
+}
+
+.nameuser{
+  text-decoration: none;
+  color: #FF2C5B !important;
+}

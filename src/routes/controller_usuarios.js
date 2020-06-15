@@ -28,7 +28,7 @@ router.get('/Usuarios', async(req, res)=>{
 
 
 //----------INICIO CREAR USUARIO-------------//
-router.post('/createuser', async (req, res)=>{
+router.post('/sad', async (req, res)=>{
 
     //Se crea variable con los datos enviados desde el frond formulario crear usuario
     const  {rol, nombre, numcc, cargo, correo, password } =  req.body;

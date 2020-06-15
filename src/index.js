@@ -2,10 +2,12 @@ const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const passport = require('passport');
 
 
 //inicializar procesos
 const app = express();
+require('./public/lib/passport');
 
 //Configuraciones del servidor
 app.set('port', process.env.PORT || 3500);
@@ -19,10 +21,12 @@ app.engine('.hbs', exphbs({
 
 app.set('view engine', '.hbs');
 
-//
+//middlaware
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Variables globales
 app.use((rep, res, next)=>{
@@ -34,6 +38,7 @@ app.use((rep, res, next)=>{
 app.use(require('./routes'));
 app.use(require('./routes/links'));
 app.use(require('./routes/controller_usuarios'));
+app.use(require('./routes/controller_registro'));
 
 
 //Archivos publicos

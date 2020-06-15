@@ -10,6 +10,7 @@
   "author": "JFO",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "browser-sync": "^2.26.7",
     "connect-flash": "^0.1.1",
     "del": "^5.1.0",
@@ -21,9 +22,11 @@
     "express-validator": "^6.4.0",
     "morgan": "^1.9.1",
     "mysql": "^2.18.1",
+    "node-localstorage": "^2.1.6",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "timeago.js": "^4.0.2"
+    "timeago.js": "^4.0.2",
+    "toastr": "^2.1.4"
   },
   "devDependencies": {
     "gulp-util": "^3.0.8",

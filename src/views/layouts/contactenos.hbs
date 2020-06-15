@@ -1,0 +1,11 @@
+  <!--Finalización del menu de inicio con el fin de que sea parametrizable -->
+                  {{#if nameUser}}
+                    <li class="nav-item mx-0 mx-lg-1"><a href="/user" class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger nameuser">{{nameUser}}</a></li>
+                  {{else}}
+                    <li class="nav-item mx-0 mx-lg-1"><a href="/registro"><button type="button" class="btn btn-outline-secondary btn-nav">REGISTRATE</button></a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a href="/login"><button type="button" class="btn btn-dark btn-nav btn-back">INGRESAR</button></button></a></li>                  
+                  {{/if}} 
+              </ul>
+          </div>
+      </div>
+    </nav>

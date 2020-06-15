@@ -3,7 +3,7 @@
          host: 'localhost',
          user: 'user',
          password: 'Qwerty16.',
-         database: 'inventoryex'
+         database: 'tecommerce'
     }
 
  }
