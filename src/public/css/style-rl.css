@@ -304,6 +304,13 @@ html {
 }
 
 .nameuser{
-  text-decoration: none;
-  color: #FF2C5B !important;
+  margin-top: 5px;
+}
+
+.imguser{
+  margin-top: -10px;
+}
+
+.section-page{
+  min-height: 100%;
 }

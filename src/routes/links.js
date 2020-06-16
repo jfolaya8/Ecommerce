@@ -37,6 +37,12 @@ router.get('/contactenos', (req, res)=>{
     res.render('layouts/contactenos', {nameUser});
 });
 
+router.get('/perfil', (req, res) =>{
+    var nameUser  = helpers.localStorage();
+    console.log(nameUser);      
+    res.render('layouts/perfil', {nameUser});
+})
+
 
 router.get('/registro', (req, res)=>{
     res.render('layouts/registro');

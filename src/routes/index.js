@@ -44,7 +44,7 @@ router.post('/validateUser', async(req, res) =>{
                   }
                 localStorage.setItem('nameUser', nameUser);
                 console.log(localStorage.getItem('nameUser'));
-                res.render('./layouts/contactenos', {nameUser}); 
+                res.redirect('/perfil'); 
             }else{
                 //Si no son correctas se envia alerta
                 textAlerta = "Usuario o contraseña incorrecta";
@@ -69,10 +69,6 @@ router.post('/validateUser', async(req, res) =>{
     }
 
 });
-
-router.get('/profile', (req, res) =>{
-    res.send('profile');
-})
 
 
 module.exports = router;

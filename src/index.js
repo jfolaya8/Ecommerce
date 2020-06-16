@@ -39,7 +39,7 @@ app.use(require('./routes'));
 app.use(require('./routes/links'));
 app.use(require('./routes/controller_usuarios'));
 app.use(require('./routes/controller_registro'));
-
+app.use(require('./routes/controller_perfil'));
 
 //Archivos publicos
 app.use(express.static(path.join(__dirname, 'public')));
