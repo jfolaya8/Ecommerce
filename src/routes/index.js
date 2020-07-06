@@ -30,20 +30,20 @@ router.post('/validateUser', async(req, res) =>{
         //Realizamos consulta con las credenciales del usuario        
         const savedPassword = await db.query(`SELECT * FROM cliente WHERE correo = '${email}'`);      
 
-        if (savedPassword .length > 0) {
-            let savedPass = JSON.stringify(savedPassword[0].contrasena);
-            savedPass = savedPass.replace(/['"]+/g, '');
+        if (savedPassword.length > 0) {
+            let savedPass = savedPassword[0].contrasena;
             var match = await helpers.matchPassword(password, savedPass);
             
             if(match == true){
-                var nameUser = JSON.stringify(savedPassword[0].nombres);
-                nameUser = nameUser.replace(/['"]+/g, '');
+                var nameUser = savedPassword[0].nombres;
                 if (typeof localStorage === "undefined" || localStorage === null) {
                     var LocalStorage = require('node-localstorage').LocalStorage;
                     localStorage = new LocalStorage('./scratch');
                   }
-                localStorage.setItem('nameUser', nameUser);
-                console.log(localStorage.getItem('nameUser'));
+                if( savedPassword[0].admin === 1){
+                    localStorage.setItem('dataAdmin', nameUser);
+                }
+                localStorage.setItem('nameUser', JSON.stringify(savedPassword));
                 res.redirect('/perfil'); 
             }else{
                 //Si no son correctas se envia alerta

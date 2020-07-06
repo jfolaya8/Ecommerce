@@ -4559,6 +4559,12 @@ input[type=button].btn-block {
   margin-bottom: -0.125rem;
 }
 
+.style{
+  -webkit-box-shadow: 10px 0px 5px -5px rgba(171,171,171,1);
+  -moz-box-shadow: 10px 0px 5px -5px rgba(171,171,171,1);
+  box-shadow: 10px 0px 5px -5px rgba(171,171,171,1);
+}
+
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
@@ -10107,8 +10113,6 @@ h3 {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
@@ -10279,5 +10283,30 @@ form .row:first-child .floating-label-form-group {
   margin: auto auto;
   margin-top: 9px;
   margin-right: 10px;
+  margin-left: 40px;
+}
+
+.form-style{
+  width: 70%;
+  margin: auto;
+}
+
+.input-style{
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.table-style{
+  margin-left: 25px;
+  margin-top: 10px;
+  width: 95% !important;
+}
+
+.general{
+  margin-left: 25px;
+}
+
+.panel-productos{
+  margin-top: -15px;
   margin-left: 40px;
 }

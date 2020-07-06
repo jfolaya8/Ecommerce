@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const passport = require('passport');
+const multer = require('multer')
 
 
 //inicializar procesos
@@ -40,6 +41,7 @@ app.use(require('./routes/links'));
 app.use(require('./routes/controller_usuarios'));
 app.use(require('./routes/controller_registro'));
 app.use(require('./routes/controller_perfil'));
+app.use(require('./routes/controller_producto'));
 
 //Archivos publicos
 app.use(express.static(path.join(__dirname, 'public')));
