@@ -10310,3 +10310,10 @@ form .row:first-child .floating-label-form-group {
   margin-top: -15px;
   margin-left: 40px;
 }
+
+#button-add-car{
+  
+  color: #ff275b;
+  margin-left: 150px; 
+
+}

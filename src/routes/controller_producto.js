@@ -44,4 +44,11 @@ router.post('/addproducto', upload.single('file'), async function (req, res){
 });
 
 
+router.get('/getProductos', async (req, res)=>{
+  const productos = await db.query(`select * from producto`); 
+  console.log(productos);
+     
+  res.send(productos);  
+});
+
 module.exports = router;

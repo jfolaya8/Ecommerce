@@ -12,8 +12,10 @@ router.get('', async(req, res) => {
 
 router.get('/index', async(req, res) => {
     let nameUser  = helpers.localStorage('nameUser');
-    nameUser = JSON.parse(nameUser);
-    nameUser = nameUser[0].nombres;  
+    if(helpers.localStorage('nameUser')){
+        nameUser = JSON.parse(nameUser);
+        nameUser = nameUser[0].nombres;
+    }
     res.render('layouts/index', {nameUser});
 })
 
@@ -22,9 +24,7 @@ router.get('/productos', async (req, res)=>{
     let nameUser  = helpers.localStorage('nameUser');
     nameUser = JSON.parse(nameUser);
     nameUser = nameUser[0].nombres;
-    const productos = await db.query(`select * from producto`);
-    console.log(productos);
-    
+    const productos = await db.query(`select * from producto`);    
     res.render('layouts/productos', {nameUser, productos});
     
 });
