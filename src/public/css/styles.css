@@ -10317,3 +10317,8 @@ form .row:first-child .floating-label-form-group {
   margin-left: 150px; 
 
 }
+
+.checkout{
+  width: 60%;
+  margin: auto;
+}

@@ -114,4 +114,25 @@ router.get('/form-add', (req, res)=>{
     res.render('layouts/form-add', {nameUser, admin});
 });
 
+router.get('/checkout', (req, res)=>{
+    let nameUser  = helpers.localStorage('nameUser');
+    if(helpers.localStorage('nameUser')){
+        nameUser = JSON.parse(nameUser);
+        nameUser = nameUser[0].nombres;
+    }
+    res.render('layouts/checkout', {nameUser});
+});
+
+router.get('/prepare-checkout/:id', (req, res)=>{
+    if(helpers.localStorage('carCheckout')){
+        let productos = helpers.localStorage('carCheckout');
+        console.log(req.params.id);
+    }else{
+
+        localStorage.setItem('carCheckout', nameUser);
+    }
+});
+
+
+
 module.exports = router;
