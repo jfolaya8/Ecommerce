@@ -40,78 +40,37 @@
 
 <div class="masthead">
     <div class="panel-productos">
-        <h2>Productos</h2>
-        <div class="row" style="width: 85%; margin: auto;">
-            {{#each productos}}
-            <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <img src="/img/66068.jpg" class="card-img-top" alt="">
-                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                    {{nombreProducto}}</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">${{precioUnitario}}</div>
-                                <a type="button" onclick="addCar({{idProducto}})">
-                                    <svg id= "button-add-car" width="26px" height="26px"  data-toggle="tooltip" title="Agregar al carrito" viewBox="0 0 16 16" class="bi bi-cart-plus"
-                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd"
-                                            d="M8.5 5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 .5-.5z" />
-                                        <path fill-rule="evenodd"
-                                            d="M8 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0v-2z" />
-                                        <path fill-rule="evenodd"
-                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                                    </svg>
-                                </a>
-                                {{!-- <button type="button" class="btn btn-outline-success button-add-car btn-sm" onclick="addCar({{idProducto}})">Agregar</button> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
+        <h2>Sobre Nosotros</h2>
+    </div>
+
+    <div class="float-container-left">
+        <div>
+            <h3 id="titulosobre"> Sobre Nosotros </h3>
+            <p id="parrafosobre"  >Llevamos mas de 5 años en el mercado tecnologico, ofrenciendo productos de
+                ultima tecnologia y con los mejores estandares de calidad, brindado siempre un buen
+                servicio a todos nuestros compradores y calidad en nuestros.</p>
         </div>
     </div>
+    <div class="float-container-left">
+        <div>
+            <h3 id="titulosobre"> Mision </h3>
+            <p id="parrafosobre">Somos una empresa que se dedica a la comercializacion de
+              productos
+              tecnologicos de alta calidad, con el onjetivo de satisfacer todas las necesidades de
+              nuestros clientes creando fidelidad y brindando la mejor calidad en servicio.</p>
+
+        </div>
+    </div>
+    <div class="float-container-left">
+        <div>
+            <h3 id="titulosobre"> Vision </h3>
+            <p id="parrafosobre">Para el año 2021 queremos ser el ecommers mas amplio a nivel colombia,
+              brindando productos a la medida y los ultimos avances de tecnologia, ademas de brindar
+              el servicio de entrega a nivel nacional, ampliando asi nuestra cobertura satisfaciendo
+              todas las necesidades de nuestros clientes con la mejor calidad en servicio.</p>
+
+        </div>
+    </div>
+
 </div>
-
-
-
-
-
-
-
-                <div class="sobre-nosotros">
-                    <div id="imagensobre">
-                        <div id="info">
-                            <p id="headtext">Sobre Nosotros</p>
-                            <p id="bodyinfo"> Llevamos mas de 5 años en el mercado tecnologico, ofrenciendo productos de
-                                ultima tecnologia y con los mejores estandares de calidad, brindado siempre un buen
-                                servicio a todos
-                                nuestros
-                                compradores
-                                y calidad en nuestros.</p>
-                        </div>
-                    </div>
-                    <div id="imagensobre2">
-                        <div id="info">
-                            <p id="headtext">Mision</p>
-                            <p id="bodyinfo"> Somos una empresa que se dedica a la comercializacion de
-                                productos
-                                tecnologicos de alta calidad, con el onjetivo de satisfacer todas las necesidades de
-                                nuestros clientes creando fidelidad y brindando la mejor calidad en servicio </p>
-                        </div>
-                    </div>
-                    <div id="imagensobre3">
-                        <div id="info">
-                            <p id="headtext">Vision</p>
-                            <p id="bodyinfo"> Para el año 2021 queremos ser el ecommers mas amplio a nivel colombia,
-                                brindando productos a la medida y los ultimos avances de tecnologia, ademas de brindar
-                                el servicio de entrega a nivel nacional, ampliando asi nuestra cobertura satisfaciendo
-                                todas las necesidades de nuestros clientes con la mejor calidad en servicio.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
